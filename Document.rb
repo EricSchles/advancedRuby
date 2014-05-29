@@ -45,21 +45,21 @@ class Document
 
     uni_count = 0
     for word in unigram_this
-      if word in unigram_other
+      if unigram_other.include? word
         uni_count += 1
       end
     end
     
     bi_count = 0
     for words in bigram_this
-      if words in bigram_other
+      if bigram_other.include? words
         bi_count += 1
       end
     end
 
     tri_count = 0
     for words in trigram_this
-      if words in trigram_other
+      if trigram_other.include? words
         tri_count += 1
       end
     end
